@@ -1,0 +1,177 @@
+
+
+/* Reset Code */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none!important;
+}
+
+*:after,
+*:before {
+    content: "";
+    clear: both;
+	display:table;
+}
+
+*, 
+*:before, 
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media (min-width:1100px){
+    .container {
+        width: 75%;
+        margin: auto;
+    }
+}
+/* Reset Code */
+
+
+
+
+
+/*==================================
+ - Box Hover Effect 
+===================*/
+
+h3.effect_title {
+    font-size:46px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    padding-left: 100px;
+}
+.effect {
+    margin-bottom: 20px;
+}
+
+
+
+#box_hover {
+    margin-top: 5%;
+}
+.box {
+    max-width: 400px;
+    width: 100%;
+    height: 275px;
+    position: relative;
+    overflow: hidden;
+    margin: auto auto 40px auto;
+}
+.box:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    background-color: rgba(0, 0, 0, .6);
+    transition: all .5s cubic-bezier(.54,.68,.49,.75);
+    z-index: 5;
+    opacity: 0;
+}
+.box:hover:after {
+    height: 100%;
+    opacity: 1;
+}
+.box img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    object-fit: cover;
+    object-position: center;
+    transition: all .6s;
+}
+.box:hover img {
+    transform: scale(1);
+}
+.box_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    z-index: 10;
+    transition: all 1s cubic-bezier(.18,1.14,.31,1.45);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+}
+.box_content h4 {
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.box_content p {
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.box:hover .box_content {
+    left: 0%;
+    opacity: 1;
+}
+.box:hover .box_content {
+    left: 0%;
+}
+
+/* effect 1 */
+.box.effect2:after {
+    width: 0 !important;
+    transition: all 1s cubic-bezier(.18,1.14,.31,1.45);
+}
+.box.effect2:hover:after {
+    width: 100% !important;
+}
+.box.effect1 .box_content > a {
+    transform: translateX(600px);
+    transition: all 1s cubic-bezier(.18,1.14,.31,1.45);
+}
+.box.effect1:hover .box_content > a {
+    transform: translateX(0px);
+}
+
+/* effect 2 */
+.box.effect2 .box_content > a {
+    transform: translateX(-600px);
+    transition: all 1s cubic-bezier(.18,1.14,.31,1.45);
+}
+.box.effect2:hover .box_content > a {
+    transform: translateX(0px);
+}
+
+/* effect 3 */
+.box.effect3 .box_content > h4 ,
+.box.effect3 .box_content > a {
+    transform: translateX(-600px);
+    transition: all 1s cubic-bezier(.18,1.14,.31,1.45);
+}
+.box.effect3:hover .box_content > h4 ,
+.box.effect3:hover .box_content > a {
+    transform: translateX(0px);
+}
+
+/*==================================
+- Box Hover Effect 
+===================*/
+
+
+
+
+
+
+
+
+
